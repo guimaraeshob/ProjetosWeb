@@ -1,0 +1,56 @@
+body{
+    color: white;
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 16px;
+
+}
+
+a{
+    color: white;               /*Deixar Texto navbar branco*/
+    text-decoration: none;         /*Tirar o sublinhado do navbar*/
+}
+
+header img{
+    width: 150px;                 /*Largura da foto de Perfil*/ 
+    height: 150px;                /*Altura da foto de perfil*/
+    border-radius: 50%;           /* Arredondar a foto de Perfil*/
+    border: 5px solid green;     /*Colocar uma borda azul na foto de Perfil */
+}
+
+footer img{
+    width: 40px;
+    height: 40px;
+}
+
+.center{
+    text-align: center;
+}
+
+h1{
+    color: green;
+}
+
+footer{
+    display: flex;              /*Deixamo os icones alinhado */         
+    justify-content: center;    /*Colocamos todos os icones no centro*/ 
+    text-align: center;         /*Alinhamos o texto ao icone */ 
+}
+
+footer a {
+    margin: 20px;               /*Espaçamento entre os icones*/ 
+}
+
+.container{
+    padding: 0px 50px;          /*Em cima e embaixo 0px - esquerda e direira 50px de margens*/
+}
+
+nav a:hover{                    /*Quando colocar o mauso sobre o nav bar ele muda de cor*/
+    color: green;
+}
