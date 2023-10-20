@@ -1,0 +1,55 @@
+.container{
+    display: flex; /*Deixa os elementos flexiveis para ser manipulados na tela*/
+    flex-direction: column; /*Definimos como colunas no container geral primeiramente*/
+    height: 100vh; /*Todos elementos dentro do container vão ocupar 100% da largura ca caixa, preenchendo todaa tela*/
+    background-image: url("../images/wall.png"); /*Imagem de funco (Parede de bloco vermelho)*/
+}
+
+.menu{
+    display: flex;/*colocar itens alinhados ao lado do outro*/
+    justify-content: space-evenly;/*dar um espaçamento entre os itens*/
+    align-items: center;
+
+    height: 90px;
+    width: 100%; /*em 100% o elemento ocupa toda a tela horiozontalmente*/
+    background: #000000; /*Fundo preto*/
+    color: #f0f8ff; /*Coloca os números na cor branca (h2)*/
+    border-bottom: 5px solid #ffff00;
+}
+
+/*É um container que contem todas as caixas de escolha*/
+.panel{
+   margin-top: 1rem;
+   display: flex;
+   align-items: center;
+   justify-content:center ;
+   
+}
+
+/*São as caixinhas de escolha na tela em um total de 9*/
+.square{
+    height: 150px;
+    width: 150px;
+    border: 2px solid;
+    background: #808080;
+}
+
+.enemy{
+    background-image:url("../images/ralph.png");/*Imagem do personagem Ralph*/
+    background-size: cover;/*adequa a imagem ao widht e height definidos em .square*/
+    
+    
+}
+
+/*Ajustando a carimnha do icone de vidas */
+.menu-lives{
+    display: flex; /*Deixou a carinha do lado no numero de vidas */
+    align-items: center; /*Alinhou a carinha com o número de vidas lado a lado*/
+    justify-content: center; /*justificar centralizado, vertical  e horizontal*/
+} 
+
+/*Atraves de uma classe, pegar seu segundo filho da tag (h2)*/
+.menu-time h2:nth-child(2),
+.menu-score h2:nth-child(2){
+    margin-top: 20px;
+}

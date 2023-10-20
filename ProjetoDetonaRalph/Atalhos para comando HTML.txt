@@ -1,0 +1,27 @@
+Atalhos para comando HTML:
+
+	div.menu-time+div.menu-score -> comando
+
+	<div class="menu-time"></div>
+        <div class="menu-score"></div>
+
+	Clonar tags:
+	
+	seleciona as tags -> alt + shift + ceta pta baixo
+
+	Atalho:
+
+	.panel.rows>.square[id="0"]*3
+	
+	    <div class="panel-row">
+                <div class="square" id="0"></div>
+                <div class="square" id="0"></div>
+                <div class="square" id="0"></div>
+            </div>
+
+ID=""     -> pode ser apreovritada para um unico elemento (unico)
+class=""  -> Pode ser aprovritada para outros elementos que tenha a mesma classe
+
+Engine ou Motor:
+
+	Nesse projeto nosso ENGINE vai ser o Javascript. 
