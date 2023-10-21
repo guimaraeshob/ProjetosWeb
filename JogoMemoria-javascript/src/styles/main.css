@@ -1,0 +1,103 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #3f1efc;
+    user-select: none; /*Não deixa selecionar as caixinhas*/
+}
+
+.container{
+    position: relative; /*deixa a caixa mais facil pra sobrepor elementos sobre ela */
+    display: flex; /*Deixa a caixa flexivel para anuzera elementos dentro dela*/
+    flex-direction: column; /*Elemento vai ficar em colunas, um abaixo do outro*/
+    justify-content: center; /* Todos elemento alinhados ao centro*/
+    align-items: center; /*Para garatir que os itens vão focar ao centro*/
+    gap: 30px;
+    background: linear-gradient(325deg, #03001e 0%, #7304c0 30%, #ec38bc 70%, #fdeff9 100% );
+    padding: 40px 60px;
+}
+
+h2{
+    font-size: 3em;
+    color:white;
+    text-transform: uppercase; /*Deixa todo o texto maiúsculo*/
+    letter-spacing:0.1em ; /*Gera um espaçamento entre as letras*/
+    color:#000000;
+   
+
+
+
+}
+
+/*Esse é o botão*/
+.reset{
+    padding: 15px 20px;
+    width: 100%; /*vai ocupar 100% do tamanho da sua caixa ou container*/
+    background: #ffffff;
+    border:none; /*Tira as bordas padrão do botão*/
+    font-size: 1.5em;
+    letter-spacing: 0.1em;/*Cria espaçamento entre as letra do botão*/
+    text-transform: uppercase; /*Para garatir que vai ficar com o texto maiusculo*/
+    cursor: pointer;
+    font-weight: 600; /*Da um peso na fonta levando pro negrito*/
+
+}
+
+.reset:focus{
+    color:#ec38bc;
+    background: #262809;
+    
+
+}
+
+.game{
+    width: 430px;
+    height: 430px;
+    /*border: 2px solid red;*/
+    display: flex; /*Deixa os elementos flexiveis e faz com que o flex-wrap funcione*/
+    flex-wrap:wrap; /*quebra os itens para linha de baixo quando maior que o container - e só funciona com o display:flex;*/
+    gap: 10px;
+    transform-style: preserve-3d; /*Vai preservar o efeito de 3D dos elementos */
+    perspective: 500px;/*Serve para auxilir a caixinha dar o efeito de girar*/
+
+}
+
+/*Configuração para os cards - que vai ser criado dinamicamente com javascripr - pois ess classe não existe no HTML*/
+.item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    
+
+    font-size: 3em; /*Aumentou a imagem dos bichos*/
+    transform: rotateY(180deg); /*Faz com que os card rodem no seu eixo*/
+    transition: 0.50s;
+}
+
+/*Vai criar um conteudo depois da classe item*/
+.item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #404040;
+    transition: 0.50s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden; /*Esconde o que esta atrás da carta*/
+    /*opacity: 0.85; -> mostra levemente o desenho atrás da carta*/
+}
+
+/*deixa a carta de costas antes de clicar*/
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+
+/*Ao clicar vira a carta e mostra o animal*/
+.boxOpen::after,
+.boxMatch::after{
+    transform: rotateY(180deg);
+}
