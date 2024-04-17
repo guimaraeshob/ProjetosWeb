@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio - IMC</title>
+</head>
+<body>
+    <div class="imc">
+        <H2>Cálculo de IMC</H2>
+        <hr>
+        
+        <label for="peso">Dogite seu peso</label>
+        <input type="number" id="peso" autofocus min="0" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+
+        <label for="altura">Digite sua altura</label>
+        <input type="number" id="altura" onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.charCode === 46" required>
+
+        <button  onclick="calcular()" id="btn-calcular">Calcular IMC</button>
+    </div>
+
+    <div id="resultado">Resultado</div>
+
+    <table id="tabela-imc">
+        <caption>Classificação do IMC</caption>
+        <tr>
+          <th>IMC</th>
+          <th>Classificação</th>
+        </tr>
+        <tr id="abaixo-peso">
+          <td>&lt; 18.5</td>
+          <td>Abaixo do peso</td>
+        </tr>
+        <tr id="peso-normal">
+          <td>18.5 - 24.9</td>
+          <td>Peso normal</td>
+        </tr>
+        <tr id="sobrepeso">
+          <td>25.0 - 29.9</td>
+          <td>Sobrepeso</td>
+        </tr>
+        <tr id="obesidade-grau-1">
+          <td>30.0 - 34.9</td>
+          <td>Obesidade grau I</td>
+        </tr>
+        <tr id="obesidade-grau-2">
+          <td>35.0 - 39.9</td>
+          <td>Obesidade grau II</td>
+        </tr>
+        <tr id="obesidade-grau-3">
+          <td>&ge; 40.0</td>
+          <td>Obesidade grau III</td>
+        </tr>
+      </table>
+    
+    <script src="script.js"></script>
+</body>
+</html>

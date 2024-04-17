@@ -1,0 +1,107 @@
+body{
+    background:#f5f5f7;
+}
+.imc{
+    background: #B0E0E6;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    padding: 5px 5px 10px 15px;
+    margin: 0 auto;
+    text-align: center;
+    height: 100px;
+    
+    
+}
+h2{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #483D8B;
+    font-family: Verdana, sans-serif;
+    margin-top: 10px;
+    
+}
+ #btn-calcular{
+  background-color: #07ee0f; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 10px; /* Tamanho da fonte */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor ao passar o mouse */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: background-color 0.3s, transform 0.2s; /* Efeitos de transição */
+}
+#btn-calcular{
+  background-color:#483D8B; /* Cor de fundo ao passar o mouse */
+  transform: translateY(-2px); /* Efeito de elevação */
+  color: white;
+}
+
+
+@keyframes move {
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px); /* Move 200 pixels para a direita */
+  }
+  0% {
+    transform: translateX(0);
+  }
+}
+
+h2 {
+  animation: move 2s infinite; /* Animação dura 2 segundos e se repete infinitamente */
+}
+
+#resultado{
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+    background:#B0E0E6 ;
+    border-radius: 5px;
+    color: #483D8B;
+    padding: 10px;
+    font-family: Verdana, sans-serif;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    width: 100px;
+
+}
+
+label{
+    color: #483D8B;  
+}
+
+table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #333;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #434242;
+    color: #483D8B;
+  }
+
+  caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #483D8B;
+  }
+
+  th {
+    background-color: #483D8B;
+    color: #efe9e9;
+  }
+
+  tr:nth-child(even) {
+    background-color:#cff1f5;
+  }
+
+  tr.marked-row{
+    background-color: #ffcccc; /* Cor de fundo para a linha marcada */
+  }
